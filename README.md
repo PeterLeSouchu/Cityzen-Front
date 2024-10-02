@@ -38,3 +38,6 @@ docker run -d -p 5173:5173 --name cityzen-container cityzen-image
 5 - Go to the browser on run : localhost:5173
 
 The application runs on a container, in order to allow everyone to launch the front no matter their environment, it is just necessary to install docker
+
+If you want you can see Cityzen here :
+https://cityzen-2024-225cd2496173.herokuapp.com/
