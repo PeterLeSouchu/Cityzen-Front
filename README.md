@@ -3,7 +3,7 @@
 The Cityzen project is a web and mobile web application that allows you to search for activities based on a city. This one is divided into two parts, the front and back, on this repository you will find the front.
 
 To launch the application you need to run the rest back first, and then launch the front, if not already done here is the link of the back repository:
-https://github.com/O-clock-Onigiri/projet-4-cityzen-back
+https://github.com/PeterLeSouchu/Cityzen-Back
 
 Once the back is launched, you have 2 choices to launch the front, either you use pnpm if it is already installed, or you use Docker.
 
