@@ -1,43 +1,82 @@
-# Cityzen-front
+# 🌟 [Projet Cityzen](https://cityzen.up.railway.app)
 
-The Cityzen project is a web and mobile web application that allows you to search for activities based on a city. This one is divided into two parts, the front and back, on this repository you will find the front.
+**Cityzen est une application web réalisé en groupe dans le cadre du projet de fin de formation de l'école O'clock. Cette dernière a été conçue pour informer sur les activités locales. Son fonctionnement est simple : l’utilisateur saisit le nom d’une ville, et l’application lui propose une liste des activités disponibles dans cette localité, accompagnée d’une carte interactive pour une navigation facile.**
 
-To launch the application you need to run the rest back first, and then launch the front, if not already done here is the link of the back repository:
-https://github.com/PeterLeSouchu/Cityzen-Back
 
-Once the back is launched, you have 2 choices to launch the front, either you use pnpm if it is already installed, or you use Docker.
 
-### For the 1st method run the following script: :
+## ⭐ Fonctionnalitées de l'application :
 
-```bash
-pnpm dev
-```
+- Créer un compte utilisateur
+- Se connecter
+- Rechercher une ville pour afficher ses activités
+- Accéder à la page détail d'une activité
+- Ajouter / Supprimer / modifier une activité
+- Ajouter ou supprimer une activité de ses favoris
+- Mofifier son pseudo
+- Modifier son mot de passe
+- Supprimer son compte
 
-### If you do not have pnpm follow these instructions :
+**Ce repo contient le code front-end de Cityzen et est dédié à la partie technique de ses fonctionnalités, si vous souhaitez voir la partie technique du back-end [cliquez-ici](https://github.com/PeterLeSouchu/Cityzen-back)**
 
-1 - Make sure you are on the main branch :
+## 🛠️ Fonctionnement du front-end :
 
-```bash
-git checkout main
-```
+### ⚙️ 1. Architecture
 
-2 - Install Docker on your machine : https://docs.docker.com/get-docker/
+- Single Page Application avec Vite, React et TypeScript.
+- Tailwind CSS pour le style avec des classes CSS personnalisées.
+- Utilisation d'ESLint AirBnb.
+- 
+### 📦 2. Store
 
-3 - Create image with dockerfile :
+- Mise en place d'un store redux.
+- 1 reducer pour l'utilisateur avec des states pour les informations de l'utilisateur (activités favorites, email, pseudo ...).
+- 1 reducer pour les activités avec 1 state des activités recherchés (car partagé sur plusieurs composants) et un state logged utilisé uniquement lors de la recherche d'activités.
+- Persistance des données avec le local storage.
 
-```bash
-docker build -t cityzen-image .
-```
+### 🔒 3. Sécurité
 
-4 - Create container with image :
+- Mise en place d'une route protégée, englobant toutes celle nécessitant une authentification et qui utilise le state "logged" du store afin de donner accès ou non à certaines routes.
+- Prémunition des attaques XSS avec React.
+- Vérification des données pour certains formulaires.
 
-```bash
-docker run -d -p 5173:5173 --name cityzen-container cityzen-image
-```
+### 🧪 4. Tests unitaires
 
-5 - Go to the browser on run : localhost:5173
+- Ajout de tests unitaires avec Vitest pour le composant <Footer/>, visant à vérifier la présence d’un lien pointant vers les mentions légales et à s'assurer que l’année affichée correspond à l’année en cours.
 
-The application runs on a container, in order to allow everyone to launch the front no matter their environment, it is just necessary to install docker
 
-If you want you can see Cityzen here :
-https://cityzen-2024-225cd2496173.herokuapp.com/
+### 🗺️ 5. Map intéractive Leaflet
+
+- Utilisation de l'API Leaflet pour implémenter une map intéractive.
+- Carte qui pointe précisement une activité pour mieux informer l'utilisateur sur sa localisation.
+
+### 💻 6. Technologies utilisées
+
+- React avec TypeScript
+- [Tailwind CSS](https://tailwindcss.com/) pour le style
+- [Axios](https://www.npmjs.com/package/axios) pour les requêtes API
+- [React-redux](https://react-redux.js.org/) pour gérer les states partagés dans mon app
+- [React toastify](https://www.npmjs.com/package/react-toastify) pour les notifications
+- [react-leaflet](https://react-leaflet.js.org/) pour la map intéractive
+- [Vitest](https://vitest.dev/) pour les tests unitaires
+- [Framer-motion](https://motion.dev/) pour l'animation du coeur lors de l'ajout d'une activité au favoris
+
+
+### ⬇️ 6. Points à ajouter ou améliorer :
+
+- Se prémunir des attaques par force brute avec un captcha pour la connnexion.
+- Mettre en place une pagination sur la page recherche pour gagner en rapidité et ainsi améliorer l'expérience utilisateur.
+- Améliorer la gestion d'erreur et éviter de faire un switch dans la fonction permettant de gérer les erreurs provenant du back. Il faudrait d'abord compléter la gestion d'erreurs en back avant de finaliser celles en front.
+- Ré-organiser et nettoyer le code pour une meilleure lisibilité.
+- Utiliser une librairie pour valider les données des formulaires, comme ZOD ou YUP car les seules validations faites sont sur la correspondance des mots de passe lors de l'inscription et de la modification du mot de passe.
+  
+
+
+🚨: Cityzen est un projet réalisé en groupe ( mais aussi mon tout premier projet ) durant mon bootcamp chez O'Clock. Le projet n'est pas encore totalement complet, je pense notamment à la gestion d'erreurs, à l'upload d'image ou encore l'utilisation de express-session au lieu du JWT. Cependant ce dernier m'a permis de découvrir beaucoup de technologies et de notions, et ce en grande partie grâce à l'équipe du projet.
+
+Collaborateurs : 
+
+- [Ryad](https://github.com/RyadC)
+- [Emmanuel](https://github.com/CHARLESEmmanuel-25)
+- [Ziad](https://github.com/ziadelidrissi)
+- [Wilson](https://github.com/SemedoWilson)
+
