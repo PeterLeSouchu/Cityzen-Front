@@ -272,7 +272,7 @@ function ModalActivity({
             />
           </div>
           <div className="flex flex-col my-1">
-            <label htmlFor="file">Photo (1 seule)</label>
+            <label htmlFor="file">Photo (1 seule) 5mo max</label>
             <input
               onChange={(e) => handlerImage(e)}
               type="file"

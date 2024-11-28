@@ -95,7 +95,7 @@ function SearchBar() {
             placeholder="Rechercher une ville"
             className="h-full  w-full  p-2 outline-none"
           />
-          {citySuggestions.length > 0 && (
+          {citySuggestions.length > 0 && ( 
             <div
               ref={suggestionsRef}
               className="absolute top-full left-0 z-50 w-full bg-white border rounded-md shadow-lg max-h-36 overflow-scroll"

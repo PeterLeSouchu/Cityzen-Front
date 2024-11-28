@@ -3,6 +3,7 @@ import Card from '../components/Card';
 
 function FavoritePage() {
   const myFavorites = useAppSelector((store) => store.profile.myFavorites);
+  console.log(myFavorites);
 
   const myFavoritesActivities = myFavorites.map((activity) => (
     <Card activity={activity} key={activity.id} />

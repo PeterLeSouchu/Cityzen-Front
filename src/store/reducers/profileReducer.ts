@@ -24,6 +24,7 @@ export const addToFavorites = createAsyncThunk(
         withCredentials: true,
       }
     );
+    console.log(data.data[0]);
     return data.data[0] as Activities;
   }
 );
