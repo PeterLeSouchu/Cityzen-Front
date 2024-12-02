@@ -71,7 +71,7 @@ L'application est accessible à l'adresse suivante: https://cityzen.up.railway.a
 - Ré-organiser et nettoyer le code pour une meilleure lisibilité.
 - Utiliser une librairie pour valider les données des formulaires, comme ZOD ou YUP car les seules validations faites sont sur la correspondance des mots de passe lors de l'inscription et de la modification du mot de passe.
 
-🚨: Cityzen est un projet réalisé en groupe ( mais aussi mon tout premier projet fullstack ) durant mon bootcamp chez O'Clock. Le projet n'est pas encore totalement complet, je pense notamment à la gestion d'erreurs, ou à la lisibilité du code qui pourrait être plus aéré et plus fractionné. Cependant ce dernier m'a permis de découvrir beaucoup de technologies et de notions, et ce en grande partie grâce à l'équipe du projet.
+🚨: Cityzen est un projet réalisé en groupe ( mais aussi mon tout premier projet fullstack ) durant mon bootcamp chez O'Clock. Le projet n'est pas encore totalement complet, je pense notamment à la gestion d'erreurs, ou à la lisibilité du code qui pourrait être plus aérée et plus fractionnée. Cependant ce dernier m'a permis de découvrir beaucoup de technologies et de notions, et ce en grande partie grâce à l'équipe du projet.
 
 Collaborateurs :
 
